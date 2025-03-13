@@ -1,7 +1,7 @@
 import pluginJs from '@eslint/js';
 import cheminfo from 'eslint-config-cheminfo';
-import noOnlyTests from 'eslint-plugin-no-only-tests';
 import pluginJest from 'eslint-plugin-jest';
+import noOnlyTests from 'eslint-plugin-no-only-tests';
 import globals from 'globals';
 
 /** @type {import('eslint').Linter.Config[]} */
