@@ -2,8 +2,8 @@
  * Find edges in an image using the Canny algorithm.
  * https://en.wikipedia.org/wiki/Canny_edge_detector
  * @template Image
- * @param {Image} image - A greyscale Image.
- * @param {Options=} options - An optional object.
+ * @param {Image} image A greyscale Image.
+ * @param {Options=} options Optional configuration settings.
  * @returns {Image} A greyscale image with the edges at options.brightness value.
  */
 export default function cannyEdgeDetector<Image>(image: Image, options?: Options | undefined): Image;
