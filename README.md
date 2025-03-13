@@ -1,8 +1,8 @@
 # canny-edge-detector
 
-  [![NPM version][npm-image]][npm-url]
-  [![build status][travis-image]][travis-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![npm download][download-image]][download-url]
 
 Canny edge detector
 
@@ -17,19 +17,20 @@ Canny edge detector
 Find edges in an image using the [Canny algorithm](https://en.wikipedia.org/wiki/Canny_edge_detector).  
 Returns a greyscale image with the edges at `options.brightness` value.
 
-__arguments__
+**arguments**
 
-* `image` - a greyscale Image
-* `options` - an optional object
+- `image` - a greyscale Image
+- `options` - an optional object
 
-__options__
+**options**
 
-* `lowThreshold`: Low threshold for the hysteresis procedure (default: 10).
-* `highThreshold`: High threshold for the hysteresis procedure (default: 30).
-* `gaussianBlur`: Sigma parameter for the gaussian filter step (default: 1.1).
-* `brightness`: Values assigned to each edge pixel on the result image (default: image.maxValue).
+- `lowThreshold`: Low threshold for the hysteresis procedure (default: 10).
+- `highThreshold`: High threshold for the hysteresis procedure (default: 30).
+- `gaussianBlur`: Sigma parameter for the gaussian filter step (default: 1.1).
+- `brightness`: Values assigned to each edge pixel on the result image (default: image.maxValue).
 
 ## Example
+
 ```js
 const cannyEdgeDetector = require('canny-edge-detector');
 const Image = require('image-js').Image;
@@ -38,7 +39,7 @@ Image.load('my-image.png').then((img) => {
   const grey = img.grey();
   const edge = cannyEdgeDetector(grey);
   return edge.save('edge.png');
-})
+});
 ```
 
 ## License
