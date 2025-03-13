@@ -1,3 +1,15 @@
+/**
+ * @typedef {object} Options Optional edge detection options.
+ * @property {number=} lowThreshold Low threshold for the hysteresis procedure (default: 10).
+ * @property {number=} highThreshold High threshold for the hysteresis procedure (default: 30).
+ * @property {number=} gaussianBlur Sigma parameter for the gaussian filter step (default: 1.1).
+ * @property {number=} brightness Values assigned to each edge pixel on the result image (default: image.maxValue).
+ */
+
+/**
+ * Default Canny edge detection options.
+ * @type {Options}
+ */
 const defaultOptions = {
     lowThreshold: 10,
     highThreshold: 30,
@@ -21,6 +33,14 @@ const convOptions = {
     mode: 'periodic'
 };
 
+/**
+ * Find edges in an image using the Canny algorithm.
+ * https://en.wikipedia.org/wiki/Canny_edge_detector
+ * @template Image
+ * @param {Image} image - A greyscale Image.
+ * @param {Options=} options - An optional object.
+ * @returns {Image} A greyscale image with the edges at options.brightness value.
+ */
 export default function cannyEdgeDetector(image, options) {
     image.checkProcessable('Canny edge detector', {
         bitDepth: 8,

@@ -12,6 +12,7 @@
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublish": "rollup -c",
+    "types": "npx -p typescript tsc src/*.js --declaration --allowJs --emitDeclarationOnly --outDir types && cat types/index.d.ts",
     "test": "run-s testonly eslint",
     "testonly": "jest"
   },
